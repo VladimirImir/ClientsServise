@@ -1,10 +1,14 @@
 package com.example.clients_service;
 
+import com.example.clients_service.models.Account;
 import com.example.clients_service.models.Client;
+import com.example.clients_service.models.Phone;
 import com.example.clients_service.repositories.AccountRepository;
 import com.example.clients_service.repositories.ClientRepository;
 import com.example.clients_service.repositories.PhoneRepository;
+import com.example.clients_service.services.data.AccountService;
 import com.example.clients_service.services.data.ClientService;
+import com.example.clients_service.services.data.PhoneService;
 import com.example.clients_service.services.data.qualifiers.ClientServiceQualifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -36,6 +40,14 @@ public class ClientsServiceApplication {
     @Autowired
     //@ClientServiceQualifier
     private ClientService clientService;
+
+    @Qualifier("accountServiceJson")
+    @Autowired
+    private AccountService accountService;
+
+    @Qualifier("phoneServiceJson")
+    @Autowired
+    private PhoneService phoneService;
 
 
     @EventListener(ApplicationReadyEvent.class)
@@ -93,9 +105,20 @@ public class ClientsServiceApplication {
         accountRepository.saveAll(accounts);*/
 
         Client c1 = new Client(0L, "S2", "N2", "P2",
-                LocalDate.of(1900, 7, 7), "email222@gmail.com");
+                LocalDate.of(1997, 7, 7), "email222@gmail.com");
         clientService.save(c1);
         clientService.findAll().forEach(System.err::println);
+
+        Account a1 = new Account(0L, 5000);
+        accountService.save(a1);
+        accountService.findAll().forEach(System.err::println);
+
+        Phone p1 = new Phone(0L, "+380981122333");
+        phoneService.save(p1);
+        phoneService.findAll().forEach(System.err::println);
+
+
+
 
 
     }

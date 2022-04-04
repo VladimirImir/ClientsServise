@@ -103,8 +103,8 @@ public class ClientsServiceApplication {
                 new Account(0L, 3000)
         );
         accountRepository.saveAll(accounts);*/
-
-        Client c1 = new Client(0L, "S2", "N2", "P2",
+        /**-------------Servise-start-------------*/
+        /*Client c1 = new Client(0L, "S2", "N2", "P2",
                 LocalDate.of(1997, 7, 7), "email222@gmail.com");
         clientService.save(c1);
         clientService.findAll().forEach(System.err::println);
@@ -115,7 +115,8 @@ public class ClientsServiceApplication {
 
         Phone p1 = new Phone(0L, "+380981122333");
         phoneService.save(p1);
-        phoneService.findAll().forEach(System.err::println);
+        phoneService.findAll().forEach(System.err::println);*/
+        /**-------------Servise-end-------------*/
 
 
 

@@ -1,10 +1,7 @@
 package com.example.clients_service;
 
-import com.example.clients_service.repositories.AccountRepository;
 import com.example.clients_service.repositories.PhoneRepository;
-import com.example.clients_service.services.data.AccountService;
 import com.example.clients_service.services.data.PhoneService;
-import com.example.clients_service.services.data.qualifiers.AccountServiceQualifier;
 import com.example.clients_service.services.data.qualifiers.PhoneServiceQualifier;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -14,6 +14,9 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "clients")
 public class Client {
+    public enum Gender{
+        NONE, MALE, FEMALE
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,12 +26,12 @@ public class Client {
     private String name;
     @Column(nullable = false, length = 30)
     private String patronymic;
-    @Column(nullable = false)
+    @Column
     private LocalDate birthDate;
     @Column(nullable = true, length = 50)
     private String email;
+    @Column
+    private Gender gender;
 
 
-
-    
 }

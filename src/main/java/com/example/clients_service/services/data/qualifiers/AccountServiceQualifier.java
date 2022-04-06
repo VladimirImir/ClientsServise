@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 import static java.lang.annotation.ElementType.*;
 
 //@Autowired
-@Qualifier("accountServiceJson")
+@Qualifier("accountServiceDb")
 @Retention(RetentionPolicy.RUNTIME)
 @Target({METHOD, FIELD, PARAMETER, TYPE})
 public @interface AccountServiceQualifier {

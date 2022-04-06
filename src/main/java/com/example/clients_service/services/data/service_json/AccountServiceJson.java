@@ -1,7 +1,6 @@
 package com.example.clients_service.services.data.service_json;
 
 import com.example.clients_service.models.Account;
-import com.example.clients_service.models.Client;
 import com.example.clients_service.services.data.AccountService;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -48,6 +47,11 @@ public class AccountServiceJson implements AccountService {
         } catch (IOException e) {
             /* e.printStackTrace();*/
         }
+        return null;
+    }
+
+    @Override
+    public List<Account> saveAll(List<Account> accounts) {
         return null;
     }
 

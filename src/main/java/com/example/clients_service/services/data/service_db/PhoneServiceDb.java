@@ -26,4 +26,8 @@ public class PhoneServiceDb implements PhoneService {
     public List<Phone> findAll(){
         return phoneRepository.findAll();
     }
+    @Override
+    public List<Phone> saveAll(List<Phone> phones) {
+        return phoneRepository.saveAll(phones);
+    }
 }

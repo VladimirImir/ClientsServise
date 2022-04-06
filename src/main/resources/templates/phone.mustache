@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>"Phone"</h1>
+<div class="form">
+    <form method="post" action="add_phone"  >
+        <input type="text" placeholder="phone" name="phone" value="+380981563300">
+        <input class="favorite styled"
+               type="submit"
+               value="Add to phone">
+    </form>
+</div>
+<div class="table">
+    <table class="table_dark">
+        <tr class="text-align">
+            <th>Id</th>
+            <th>Phone</th>
+        </tr>
+        {{#phones}}
+            <tr class="text-align">
+                <td>{{id}}</td>
+                <td>{{phone}}</td>
+            </tr>
+        {{/phones}}
+    </table>
+</div>
+</body>
+<a href="/" >
+    <h3 class="close">Main page</h3>
+</a>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>"Clients - Service"</h1>
+<a href="/phone" >
+    <h2>"Phone"</h2>
+    <img src="../image/phone.jpg" alt="phone">
+</a>
+<a href="/account" >
+    <h2>"Account"</h2>
+</a>
+<div class="form">
+    <form method="post" action="add_client"  >
+        <input type="text" placeholder="surname" name="surname" value="Boba">
+        <input type="text" placeholder="name" name="name" value="Vladimir">
+        <input type="text" placeholder="patronymic" name="patronymic" value="Vladimirovich">
+        <input type="date" placeholder="birthDate" name="birthDate">
+        <input type="text" placeholder="email" name="email" value="vova01@gmail.com">
+        <select name="gender">
+            <option value="NONE">NONE</option>
+            <option value="MALE">MALE</option>
+            <option value="FEMALE">FEMALE</option>
+        </select>
+        <input class="favorite styled"
+               type="submit"
+               value="Add to client">
+    </form>
+</div>
+<div class="table">
+    <table class="table_dark">
+        <tr class="text-align">
+            <th>Id</th>
+            <th>Surname</th>
+            <th>Name</th>
+            <th>Patronymic</th>
+            <th>BirthDate</th>
+            <th>Email</th>
+            <th>Gender</th>
+        </tr>
+        {{#clients}}
+            <tr class="text-align">
+                <td>{{id}}</td>
+                <td>{{surname}}</td>
+                <td>{{name}}</td>
+                <td>{{patronymic}}</td>
+                <td>{{birthDate}}</td>
+                <td>{{email}}</td>
+                <td>{{gender}}</td>
+            </tr>
+        {{/clients}}
+    </table>
+</div>
+</body>
+</html>

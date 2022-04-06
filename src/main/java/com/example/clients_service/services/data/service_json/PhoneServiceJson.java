@@ -51,4 +51,9 @@ public class PhoneServiceJson implements PhoneService {
         return null;
     }
 
+    @Override
+    public List<Phone> saveAll(List<Phone> phones) {
+        return null;
+    }
+
 }

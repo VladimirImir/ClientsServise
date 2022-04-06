@@ -12,4 +12,7 @@ public interface AccountService {
     Account save(Account account);
 
     List<Account> findAll();
+
+    List<Account> saveAll(List<Account> accounts);
+
 }

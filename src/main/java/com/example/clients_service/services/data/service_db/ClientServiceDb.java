@@ -27,5 +27,10 @@ public class ClientServiceDb implements ClientService {
         return clientRepository.findAll();
     }
 
+    @Override
+    public List<Client> saveAll(List<Client> clients) {
+        return clientRepository.saveAll(clients);
+    }
+
 
 }

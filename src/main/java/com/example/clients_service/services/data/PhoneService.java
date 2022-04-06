@@ -12,4 +12,6 @@ public interface PhoneService {
     Phone save(Phone phone);
 
     List<Phone> findAll();
+
+    List<Phone> saveAll(List<Phone> phones);
 }

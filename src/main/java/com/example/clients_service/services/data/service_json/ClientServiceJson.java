@@ -52,4 +52,9 @@ public class ClientServiceJson implements ClientService {
         }
         return null;
     }
+
+    @Override
+    public List<Client> saveAll(List<Client> clients) {
+        return null;
+    }
 }

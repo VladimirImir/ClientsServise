@@ -1,6 +1,7 @@
 package com.example.clients_service.repositories;
 
 import com.example.clients_service.models.Client;
+import com.example.clients_service.models.Client.Gender;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +20,7 @@ public class ClientRepositoryTest {
     @Test
     void save(){
         Client c1 = new Client(0L, "Boba", "Vladimir", "Vladimirovich",
-                LocalDate.of(1997, 7, 7), "email222@gmail.com");
+                LocalDate.of(1997, 7, 7), "email222@gmail.com", Gender.MALE);
         Client c2 = clientRepository.save(c1);
         Assertions.assertNotNull(c2);
 

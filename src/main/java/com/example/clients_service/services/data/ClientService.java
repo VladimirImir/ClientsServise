@@ -12,4 +12,7 @@ public interface ClientService {
     Client save(Client client);
 
     List<Client> findAll();
+
+    List<Client> saveAll(List<Client> clients);
+
 }

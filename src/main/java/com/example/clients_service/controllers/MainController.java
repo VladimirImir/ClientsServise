@@ -1,5 +1,6 @@
 package com.example.clients_service.controllers;
 
+import com.example.clients_service.controllers.tools.BootstrapManager;
 import com.example.clients_service.models.Client;
 import com.example.clients_service.models.Client.Gender;
 import com.example.clients_service.services.data.ClientService;
@@ -22,6 +23,7 @@ public class MainController {
 
     @GetMapping("/")
     public String main(Model model){
+        BootstrapManager.setBootstrapHead(model);
         List<Client> clients = clientService.findAll();
         model.addAttribute("clients", clients);
         return "main";
@@ -43,8 +45,10 @@ public class MainController {
                             ){
         System.err.println(LocalDate.parse(birthDate));
         System.err.println(gender);
-        Client client = new Client(0L, surname, name, patronymic, LocalDate.parse(birthDate) , email, gender);
+        Client client = new Client(0L, surname, name, patronymic, LocalDate.parse(birthDate) , email, gender, null);
         clientService.save(client);
         return "redirect:/";
     }
 }
+
+

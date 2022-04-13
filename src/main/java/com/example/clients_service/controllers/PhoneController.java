@@ -29,7 +29,7 @@ public class PhoneController {
     public String addPhone(Model model,
                            @RequestParam("phone") String phone){
         System.err.println(phone);
-        Phone p1 = new Phone(0L, "+380981630055");
+        Phone p1 = new Phone(0L, "+380981630055", null);
         phoneService.save(p1);
         return "redirect:/phone";
     }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <a href="authorization">AUTHORIZATION</a>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="logout">LOGOUT</a>
+        </li>
+    </ul>
+</nav>
+<div>
+    <form method="post" action="register"> <div>
+        <label>
+            <input type="text" name="login" placeholder="Login">
+        </label>
+    </div>
+        <div>
+            <label>
+                <input type="password" name="pass" placeholder="Password">
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="text" name="mail" placeholder="Mail">
+            </label>
+        </div>
+        <!-- <input type="hidden" name="_csrf" value="{_csrf.token}}">-->
+        <input type="button" value="Cancel">
+        <input type="submit" value="Register">
+    </form>
+
+</div>
+</body>
+</html>

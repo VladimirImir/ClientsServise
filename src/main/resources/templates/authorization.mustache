@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorization</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <a href="registration">REGISTRATION</a>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="logout">LOGOUT</a>
+        </li>
+    </ul>
+</nav>
+<div>
+    <form method="post" action="/authorization">
+        <div>
+            <label>
+                <input type="text" name="username" placeholder="Login">
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="password" name="password" placeholder="Password">
+            </label>
+        </div>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+        <input type="button" value="Cancel">
+        <input type="submit" value="Login">
+    </form>
+</div>
+</body>
+</html>

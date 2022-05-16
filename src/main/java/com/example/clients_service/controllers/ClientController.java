@@ -16,7 +16,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Controller
-public class MainController {
+public class ClientController {
     @ClientServiceQualifier
     @Autowired
     private ClientService clientService;
@@ -31,6 +31,10 @@ public class MainController {
 
     @GetMapping("main")
     public String main(){
+        return "redirect:";
+    }
+    @GetMapping("clients")
+    public String clients(){
         return "redirect:";
     }
 
